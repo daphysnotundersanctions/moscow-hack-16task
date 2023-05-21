@@ -1,5 +1,17 @@
-<template>123</template>
+<template>
+  <div>Поиск по вакансиям</div>
 
-<script></script>
+  <SearchInput />
+  <div style="display: flex">
+    <trainee-filter />
+    <UiCard />
+  </div>
+</template>
+
+<script setup>
+import SearchInput from "../components/SearchInput.vue";
+import TraineeFilter from "../components/TraineeFilter.vue";
+import UiCard from "../components/ui-kit/UiCard.vue";
+</script>
 
 <style></style>
