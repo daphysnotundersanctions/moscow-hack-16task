@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 const items = ref([
-  { title: "Домой", icon: "mdi-home-outline" },
+  { title: "Домой", icon: "mdi-home-outline", route: "/" },
   { title: "Избранное", icon: "mdi-heart-outline" },
   { title: "Чаты", icon: "mdi-chat-outline" },
   { title: "Отклики", icon: "mdi-arrow-u-right-top" },
@@ -46,9 +46,10 @@ const drawer = ref(true);
         <v-list density="compact" nav>
           <template v-for="(item, id) in items" :key="id">
             <v-list-item
+              @click="$router.push(item.route)"
               :prepend-icon="item.icon"
               :title="item.title"
-              value="home"
+              :value="item.title"
             ></v-list-item>
           </template>
         </v-list>

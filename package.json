@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "coda",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
     "@mdi/font": "^7.2.96",
     "axios": "^1.4.0",
     "pinia": "^2.1.3",
+    "sass-loader": "10",
     "vue": "^3.2.47",
     "vue-router": "4",
     "vuetify": "^3.3.0"
