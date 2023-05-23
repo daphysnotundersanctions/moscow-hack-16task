@@ -4,7 +4,13 @@
   <SearchInput />
   <div style="display: flex">
     <trainee-filter />
-    <UiCard />
+    <v-row no-gutters>
+      <template v-for="i in 10">
+        <v-col>
+          <UiCard class="pa-2 ma-2" />
+        </v-col>
+      </template>
+    </v-row>
   </div>
 </template>
 

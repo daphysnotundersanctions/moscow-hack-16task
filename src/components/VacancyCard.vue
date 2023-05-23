@@ -59,13 +59,31 @@
             <v-btn v-bind="props"> Откликнуться </v-btn>
           </template>
 
-          <v-card>
-            <v-card-title
+          <v-card class="bordered-card px-16 py-14">
+            <v-card-title class="text-h5"
               >Отклик на вакансию: “Продуктовый дизайнер”</v-card-title
             >
-            <v-card>
-              <v-card-title>
-                1. О чём вы хотели бы рассказать работодателю до того, как он
+            <v-card
+              style="background-color: #f9f9fc"
+              class="px-9 pb-9 pt-6 bordered-card"
+            >
+              <v-card-title class="text-subtitle-1">
+                1. Выберите резюме для отклика на эту вакансию:
+              </v-card-title>
+              <v-textarea
+                rows="1"
+                clearable
+                variant="outlined"
+                auto-grow
+              ></v-textarea>
+            </v-card>
+
+            <v-card
+              style="background-color: #f9f9fc"
+              class="px-9 pb-9 pt-6 bordered-card mt-7"
+            >
+              <v-card-title class="text-subtitle-1">
+                2. О чём вы хотели бы рассказать работодателю до того, как он
                 откроет ваше резюме:
               </v-card-title>
               <v-textarea
@@ -73,16 +91,32 @@
                 clearable
                 variant="outlined"
                 auto-grow
+                placeholder="Напишите, например, о ваших навыках, которые помогут справляться с задачами из этой вакансии эффективнее. Это выделит вашу заявку."
               ></v-textarea>
             </v-card>
 
-            <v-card>
-              <v-card-title>
-                2. Для отклика на эту вакансию необходимо выполнить тестовое
+            <v-card
+              style="background-color: #f9f9fc"
+              class="px-9 pb-9 pt-6 bordered-card mt-7"
+            >
+              <v-card-title class="text-subtitle-1">
+                3. Для отклика на эту вакансию необходимо выполнить тестовое
                 задание.
               </v-card-title>
+              <v-row align="center">
+                <v-btn prepend-icon="mdi-download">Скачать</v-btn>
+                <div class="pl-2">
+                  Техническое задание для Продуктового Дизайнера.pdf
+                </div>
+              </v-row>
+              <v-row align="center">
+                <v-btn append-icon="mdi-arrow-right">Перейти</v-btn>
+                <div class="pl-2">Палитра для UI кита</div>
+              </v-row>
+
               <v-textarea
                 rows="1"
+                placeholder="Вставьте сюда ссылку на выполненное Техническое Задание"
                 clearable
                 variant="outlined"
                 auto-grow
@@ -90,11 +124,12 @@
             </v-card>
 
             <v-card-actions>
-              <v-btn @click="sendResponse()">Отправить</v-btn>
-              <v-btn @click="responseDialog = false">Назад</v-btn>
+              <v-btn width="351" @click="sendResponse()">Отправить</v-btn>
+              <v-btn width="351" @click="responseDialog = false">Назад</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
+        <!-- text-subtitle-2 -->
         <v-btn
           variant="outlined"
           min-width="50"
@@ -136,4 +171,8 @@ function sendResponse() {
   responseDialog.value = false;
 }
 </script>
-<style lang=""></style>
+<style scoped>
+.bordered-card {
+  border-radius: 12px;
+}
+</style>

@@ -38,11 +38,21 @@ defineProps({
     </v-card-text>
 
     <v-card-actions>
-      <v-row justify="center" class="py-5" align-content="space-between">
-        <v-btn variant="outlined" height="50"> Подробнее </v-btn>
+      <v-row justify="center" class="py-5 px-6">
+        <v-btn
+          color="light-blue
+          "
+          width="180"
+          variant="flat"
+          height="50"
+          class="text-none"
+        >
+          Подробнее
+        </v-btn>
         <v-btn
           variant="outlined"
           min-width="50"
+          style="border-radius: 6px; color: #66b0f9"
           height="50"
           icon="mdi-heart-outline"
         ></v-btn>
