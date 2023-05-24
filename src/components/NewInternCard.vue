@@ -1,0 +1,48 @@
+<template>
+  <v-card>
+    <v-row>
+      <v-select
+        label="Select"
+        :items="[
+          'California',
+          'Colorado',
+          'Florida',
+          'Georgia',
+          'Texas',
+          'Wyoming',
+        ]"
+        variant="solo-filled"
+      ></v-select>
+      <v-select
+        label="Select"
+        :items="[
+          'California',
+          'Colorado',
+          'Florida',
+          'Georgia',
+          'Texas',
+          'Wyoming',
+        ]"
+        variant="solo-filled"
+      ></v-select>
+      <v-select
+        label="Select"
+        :items="[
+          'California',
+          'Colorado',
+          'Florida',
+          'Georgia',
+          'Texas',
+          'Wyoming',
+        ]"
+        variant="solo-filled"
+      ></v-select>
+    </v-row>
+    <v-textarea></v-textarea>
+    <v-textarea></v-textarea>
+    <v-textarea></v-textarea>
+    <v-btn>Создать заявку</v-btn>
+    <v-btn>Отменить</v-btn>
+  </v-card>
+</template>
+<script></script>
