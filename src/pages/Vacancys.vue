@@ -2,16 +2,16 @@
   <div>Поиск по вакансиям</div>
 
   <SearchInput />
-  <div style="display: flex">
+  <v-sheet class="d-flex">
     <trainee-filter />
-    <v-row no-gutters>
-      <template v-for="i in 10">
-        <v-col>
+    <v-container>
+      <v-row no-gutters>
+        <v-col v-for="i in 10" sm="4" cols="12">
           <UiCard class="pa-2 ma-2" />
         </v-col>
-      </template>
-    </v-row>
-  </div>
+      </v-row>
+    </v-container>
+  </v-sheet>
 </template>
 
 <script setup>

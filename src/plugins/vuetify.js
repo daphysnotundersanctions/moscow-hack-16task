@@ -7,4 +7,4 @@ import 'vuetify/styles';
 export const vuetifyConfig = createVuetify({
     components,
     directives,
-  })
+})

@@ -9,7 +9,7 @@ defineProps({
 </script>
 
 <template>
-  <v-card border="12px" width="296">
+  <v-card style="border-radius: 12px" width="296">
     <v-card-title class="text-subtitle-1 px-6 pt-5 pb-0">
       Продуктовый дизайнер
     </v-card-title>
