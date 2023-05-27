@@ -1,13 +1,18 @@
 <template>
+  <v-breadcrumbs :items="['Foo', 'Bar', 'Fizz']"></v-breadcrumbs>
+
   <v-card
     max-width="fit-content"
-    style="display: flex; justify-content: space-between"
+    style="display: flex; justify-content: space-between; margin: auto"
   >
     <v-card max-width="804">
       <v-card-title> Продуктовый дизайнер </v-card-title>
+
       <v-card-subtitle>
-        <v-icon icon="mdi-currency-rub"></v-icon> от 75 000</v-card-subtitle
-      >
+        <v-icon icon="mdi-currency-rub" />
+        от 75 000
+      </v-card-subtitle>
+
       <div class="px-6">
         <v-row align="center">
           <div class="text-subtitle-2 mr-1">Формат работы:</div>
@@ -70,12 +75,11 @@
               <v-card-title class="text-subtitle-1">
                 1. Выберите резюме для отклика на эту вакансию:
               </v-card-title>
-              <v-textarea
-                rows="1"
-                clearable
+              <v-select
+                v-model="chosenResume"
+                :items="itemsToChose"
                 variant="outlined"
-                auto-grow
-              ></v-textarea>
+              ></v-select>
             </v-card>
 
             <v-card
@@ -83,8 +87,8 @@
               class="px-9 pb-9 pt-6 bordered-card mt-7"
             >
               <v-card-title class="text-subtitle-1">
-                2. О чём вы хотели бы рассказать работодателю до того, как он
-                откроет ваше резюме:
+                2. Несколько слов о вас, которые прочтут до того, как откроют
+                ваше резюме:
               </v-card-title>
               <v-textarea
                 rows="1"
@@ -95,7 +99,7 @@
               ></v-textarea>
             </v-card>
 
-            <v-card
+            <!-- <v-card
               style="background-color: #f9f9fc"
               class="px-9 pb-9 pt-6 bordered-card mt-7"
             >
@@ -121,7 +125,7 @@
                 variant="outlined"
                 auto-grow
               ></v-textarea>
-            </v-card>
+            </v-card> -->
 
             <v-card-actions>
               <v-btn width="351" @click="sendResponse()">Отправить</v-btn>
@@ -150,9 +154,8 @@
       <img class="pl-10 pt-9" src="../assets/img/vacancyImg.svg" alt="" />
       <v-card-title class="pl-10">Sparrow agency</v-card-title>
       <v-card-subtitle class="pl-10">
-        <v-icon icon="mdi-map-marker-outline"></v-icon> Москва, Новый
-        арбат</v-card-subtitle
-      >
+        <v-icon icon="mdi-map-marker-outline" /> Москва, Новый арбат
+      </v-card-subtitle>
       <v-card-text class="pl-10"
         >Компания занимается оарпни твноаоо мимигц мннануиси, а так же арприна
         старинаоп ратсныпвтс омомарвт сосрарммррмвот, с применением
@@ -163,14 +166,18 @@
 </template>
 <script setup>
 import { ref } from "vue";
-
+const props = defineProps({ vacancyCardInfo: Object });
 const responseDialog = ref(false);
+
+const itemsToChose = ref(["Продуктовый дизайнер", "2321"]);
+const chosenResume = ref(["Продуктовый дизайнер"]);
 
 function sendResponse() {
   console.log(123);
   responseDialog.value = false;
 }
 </script>
+
 <style scoped>
 .bordered-card {
   border-radius: 12px;

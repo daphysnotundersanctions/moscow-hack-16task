@@ -6,8 +6,8 @@
     <trainee-filter />
     <v-container>
       <v-row no-gutters>
-        <v-col v-for="i in 10" sm="4" cols="12">
-          <UiCard class="pa-2 ma-2" />
+        <v-col v-for="(i, id) in vacancys" :key="id" sm="4" cols="12">
+          <UiCard :card-id="i.id" :cardInfo="i" class="pa-2 ma-2" />
         </v-col>
       </v-row>
     </v-container>
@@ -18,6 +18,39 @@
 import SearchInput from "../components/SearchInput.vue";
 import TraineeFilter from "../components/TraineeFilter.vue";
 import UiCard from "../components/ui-kit/UiCard.vue";
+import { ref } from "vue";
+
+const vacancys = ref([
+  {
+    title: "Продуктовый дизайнер",
+    price: "75 000",
+    id: "1",
+    place: "Москва, Новый арбат",
+    company: "Sparrow agency",
+    workFormat: ["Удалёнка", "Офис"],
+    employment: ["Удалёнка", "Офис"],
+    vacancyText:
+      "Ищем в первую очередь хорошего человека, который уже участовал в развитии",
+  },
+  {
+    title: "Продуктовый дизайнер",
+    company: "Sparrow agency",
+    workFormat: ["Удалёнка", "Офис"],
+    id: "1",
+    employment: ["Удалёнка", "Офис"],
+    vacancyText:
+      "Ищем в первую очередь хорошего человека, который уже участовал в развитии",
+  },
+  {
+    title: "Продуктовый дизайнер",
+    company: "Sparrow agency",
+    workFormat: ["Удалёнка", "Офис"],
+    id: "1",
+    employment: ["Удалёнка", "Офис"],
+    vacancyText:
+      "Ищем в первую очередь хорошего человека, который уже участовал в развитии",
+  },
+]);
 </script>
 
 <style></style>

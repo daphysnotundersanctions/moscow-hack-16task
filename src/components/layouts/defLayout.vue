@@ -3,11 +3,8 @@ import { ref } from "vue";
 const items = ref([
   { title: "Домой", icon: "mdi-home-outline", route: "/" },
   { title: "Избранное", icon: "mdi-heart-outline" },
-  { title: "Чаты", icon: "mdi-chat-outline" },
   { title: "Отклики", icon: "mdi-arrow-u-right-top" },
   { title: "Вакансии", icon: "mdi-briefcase-outline" },
-  { title: "Стажировки", icon: "mdi-briefcase-outline" },
-  { title: "Проекты", icon: "mdi-briefcase-outline" },
 ]);
 const rail = ref(true);
 const drawer = ref(true);
@@ -54,7 +51,7 @@ const drawer = ref(true);
           </template>
         </v-list>
       </v-navigation-drawer>
-      <v-main>
+      <v-main style="background-color: #f9f9fc">
         <slot />
       </v-main>
     </v-layout>

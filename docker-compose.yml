@@ -1,4 +1,4 @@
-version: '3.9'
+version: "3.9"
 
 services:
   postgres:
@@ -11,7 +11,7 @@ services:
     ports:
       - "5432:5432"
     networks:
-      - local-keycloak
+      - keycloak
 
   keycloak:
     depends_on:
