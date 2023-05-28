@@ -9,7 +9,7 @@
 
     <v-row>
       <v-col cols="12" sm="4" v-for="(resume, id) in resumes">
-        <UiResumeCard :cardInfo="resume" />
+        <UiResumeCard :card-id="id" :cardInfo="resume" />
       </v-col>
     </v-row>
   </v-container>

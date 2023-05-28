@@ -4,20 +4,24 @@
     <v-row>
       <v-col>
         <div class="mb-2 text-subtitle-2">Сортировка по дате</div>
-        <v-select variant="outlined"></v-select>
+        <v-select :items="['Сначала новые']" variant="outlined"></v-select>
       </v-col>
       <v-col>
-        <div class="mb-2 text-subtitle-2">Сортировка по дате</div>
-        <v-select variant="outlined"></v-select>
+        <div class="mb-2 text-subtitle-2">По приоритету</div>
+        <v-select variant="outlined" :items="['Все']"></v-select>
       </v-col>
       <v-col>
-        <div class="mb-2 text-subtitle-2">Сортировка по дате</div>
-        <v-select variant="outlined"></v-select>
+        <div class="mb-2 text-subtitle-2">По статусу заявки</div>
+        <v-select variant="outlined" :items="['Все']"></v-select>
       </v-col>
     </v-row>
     <v-row no-gutters>
       <v-col cols="12" sm="6" v-for="(response, id) in responsesData">
-        <UiResponseCard class="ma-2 pa-2" :response-info="response" />
+        <UiResponseCard
+          class="ma-2 pa-2"
+          :response-id="++id"
+          :response-info="response"
+        />
       </v-col>
     </v-row>
   </v-container>

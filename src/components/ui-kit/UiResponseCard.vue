@@ -1,5 +1,9 @@
 <template>
-  <v-card style="border-radius: 12px" class="d-flex flex-row">
+  <v-card
+    @click="$router.push(`/responses/${responseId}`)"
+    style="border-radius: 12px; cursor: pointer"
+    class="d-flex flex-row"
+  >
     <v-col class="pa-0">
       <v-card-title class="pb-1">
         <span class="text-subtitle-1">
@@ -21,8 +25,8 @@
       </v-card-text>
     </v-col>
     <v-divider color="success" vertical></v-divider>
-    <v-col align="center" class="d-flex flex-column">
-      <img src="../../assets/img/internStatus1.svg" />
+    <v-col class="d-flex align-center justify-center flex-column">
+      <img class="mb-2" src="../../assets/img/internStatus1.svg" width="102" />
       <div class="text-caption">Куда подана заявка</div>
       <div class="text-subtitle-1">
         {{ responseInfo.company }}
@@ -35,6 +39,7 @@ import { defineProps } from "vue";
 
 defineProps({
   responseInfo: Object,
+  responseId: Number,
 });
 </script>
 <style lang=""></style>
