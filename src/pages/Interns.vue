@@ -1,7 +1,9 @@
 <template>
-  <div class="text-h4 ml-10">Поиск стажёров</div>
+  <v-container>
+    <div class="text-h4 ml-10">Поиск стажёров</div>
 
-  <SearchInput />
+    <SearchInput />
+  </v-container>
   <v-sheet class="d-flex">
     <InternsFilter />
     <v-container>

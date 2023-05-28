@@ -2,9 +2,9 @@
 import { ref } from "vue";
 const items = ref([
   { title: "Домой", icon: "mdi-home-outline", route: "/" },
-  { title: "Избранное", icon: "mdi-heart-outline" },
+  { title: "Избранное", icon: "mdi-heart-outline", route: "/resumes" },
   { title: "Отклики", icon: "mdi-arrow-u-right-top", route: "/responses" },
-  { title: "Вакансии", icon: "mdi-briefcase-outline" },
+  { title: "Вакансии", icon: "mdi-briefcase-outline", route: "/interns" },
 ]);
 const rail = ref(true);
 const drawer = ref(true);
@@ -19,7 +19,12 @@ const drawer = ref(true);
         app
         dark
       >
-        <v-app-bar-title class="text-h5">CODA</v-app-bar-title>
+        <v-app-bar-title
+          class="text-h5"
+          style="cursor: pointer"
+          @click="$router.push('/')"
+          >CODA</v-app-bar-title
+        >
         <template v-slot:append>
           <v-btn height="50" icon="mdi-bell-outline"></v-btn>
           <v-list-item

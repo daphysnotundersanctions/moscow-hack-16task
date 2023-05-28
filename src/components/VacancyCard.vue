@@ -1,6 +1,4 @@
 <template>
-  <v-breadcrumbs :items="['Foo', 'Bar', 'Fizz']"></v-breadcrumbs>
-
   <v-card
     max-width="fit-content"
     style="display: flex; justify-content: space-between; margin: auto"

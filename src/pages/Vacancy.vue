@@ -1,7 +1,10 @@
 <template>
-  <div>
+  <v-container>
+    <v-breadcrumbs
+      :items="['Стажировки ', 'Мэрия Москвы', 'Продуктовый дизайнер']"
+    ></v-breadcrumbs>
     <VacancyCard />
-  </div>
+  </v-container>
 </template>
 <script setup>
 import VacancyCard from "../components/VacancyCard.vue";
