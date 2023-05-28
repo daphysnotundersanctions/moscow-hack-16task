@@ -1,5 +1,5 @@
 <template>
-  <v-card style="border-radius: 12px" class="d-flex">
+  <v-card style="border-radius: 12px" class="d-flex flex-row">
     <v-col class="pa-0">
       <v-card-title class="pb-1">
         <span class="text-subtitle-1">

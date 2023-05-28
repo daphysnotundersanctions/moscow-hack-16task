@@ -62,31 +62,9 @@ defineProps({
       {{ cardInfo.vacancyText }}
     </v-card-text>
 
-    <v-card-actions v-if="cardInfo.type != 'resume'">
-      <v-row justify="center" class="py-5 px-6">
-        <v-btn
-          @click="$router.push(`/${cardId}`)"
-          color="light-blue
-          "
-          width="180"
-          variant="flat"
-          height="50"
-          class="text-none"
-        >
-          Подробнее
-        </v-btn>
-        <v-btn
-          variant="outlined"
-          min-width="50"
-          style="border-radius: 6px; color: #66b0f9"
-          height="50"
-          icon="mdi-heart-outline"
-        ></v-btn>
-      </v-row>
-    </v-card-actions>
-
-    <v-card-actions v-if="cardInfo.type === 'resume'">
+    <v-card-actions>
       <v-btn
+        v-if="cardInfo.type != 'isPublished'"
         color="light-blue"
         width="180"
         variant="flat"
@@ -95,6 +73,16 @@ defineProps({
         class="text-none"
       >
         Опубликовать
+      </v-btn>
+      <v-btn
+        width="180"
+        variant="flat"
+        block
+        height="50"
+        class="text-none blue-border"
+        v-else
+      >
+        Снять с публикации
       </v-btn>
     </v-card-actions>
   </v-card>

@@ -3,7 +3,7 @@ import { ref } from "vue";
 const items = ref([
   { title: "Домой", icon: "mdi-home-outline", route: "/" },
   { title: "Избранное", icon: "mdi-heart-outline" },
-  { title: "Отклики", icon: "mdi-arrow-u-right-top" },
+  { title: "Отклики", icon: "mdi-arrow-u-right-top", route: "/responses" },
   { title: "Вакансии", icon: "mdi-briefcase-outline" },
 ]);
 const rail = ref(true);

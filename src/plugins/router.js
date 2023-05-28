@@ -1,19 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Vacancys from "../pages/Vacancys.vue";
-import Vacancy from "../pages/Vacancy.vue";
-import Interns from "../pages/Interns.vue";
 import Intern from "../pages/Intern.vue";
-import Response from "../pages/Response.vue";
+import Interns from "../pages/Interns.vue";
+import MyResumes from "../pages/MyResumes.vue";
+import Responses from "../pages/Responses.vue";
+import Vacancy from "../pages/Vacancy.vue";
+import Vacancys from "../pages/Vacancys.vue";
 
 const routes = [
-  {
-    path: "/",
-    component: Vacancys,
-  },
+  { path: "/", component: Vacancys },
   { path: "/:vacancy", component: Vacancy },
   { path: "/interns", component: Interns },
   { path: "/interns/:intern", component: Intern },
-  { path: "/response", component: Response },
+  { path: "/responses", component: Responses },
+  { path: "/resumes", component: MyResumes },
 ];
 
 export const routerConfig = createRouter({
