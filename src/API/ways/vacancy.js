@@ -3,11 +3,11 @@ import { API } from "../index.js";
 const prefix = "/vacancy";
 
 const getAllVacancys = () => {
-  API.get(`${prefix}`);
+  return API.get(`${prefix}`);
 };
 
 const getVacancysDetails = (vacancyID) => {
-  API.get(`${prefix}/${vacancyID}`);
+  return API.get(`${prefix}/${vacancyID}`);
 };
 
 export default {

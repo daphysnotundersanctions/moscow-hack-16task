@@ -1,0 +1,9 @@
+{
+    "realm": "traineeship",
+    "onLoad" : "login-required",
+    "auth-server-url": "http://localhost:8081/auth/",
+    "ssl-required": "external",
+    "resource": "vue-test",
+    "public-client": true,
+    "confidential-port": 0
+  }

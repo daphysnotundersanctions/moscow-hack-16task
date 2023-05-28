@@ -2,7 +2,9 @@
   <v-container>
     <v-row>
       <div class="text-h4">Мои резюме</div>
-      <v-btn append-icon="mdi-plus"> Создать новое резюме </v-btn>
+      <v-btn @click="fetchData" append-icon="mdi-plus">
+        Создать новое резюме
+      </v-btn>
     </v-row>
 
     <v-row no-gutters>
@@ -40,11 +42,9 @@ const resumes = ref([
   },
 ]);
 
-onMounted(() => {
-  resume.getAllResumes().then((response) => {
-    resumes.value = response;
-  });
-});
+async function fetchData() {
+  resume.getAllResumes();
+}
 </script>
 
 <style></style>
